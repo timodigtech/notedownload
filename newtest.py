@@ -38,17 +38,10 @@ def get_novel_title_text(url):
     # 将文本信息写入文件
     with open(file_name, 'a') as file:
         file.write(re_content)
-
-    # print("文本信息已存储到文件：", file_name)
-    
-# get_novel_title_text(url)
 start_num = 16016118
 end_num = 16016125
 
 for i in range(start_num, end_num + 1):
     new_url = url.replace(str(start_num), str(i))
-    # print(new_url)
     get_novel_title_text(new_url)
-    # print('new:',new_url)
-    # print('new:',url)
 
