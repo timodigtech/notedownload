@@ -22,11 +22,9 @@ def get_novel_title_text(url):
         if result_text:
             # 通过索引 [0] 获取第一个匹配结果的文本
             # title_content=result_tilte[0]
-            print(result_tilte)
             content = result_text[0].text_content()
             text_content=re.sub(r'\s+', '\n', content)
             re_content=result_tilte[0].text_content()+'\n'+'\n'+text_content
-            # print("提取的内容：", re_content)
         else:
             print("未找到匹配的结果")
     else:
@@ -38,9 +36,11 @@ def get_novel_title_text(url):
     # 将文本信息写入文件
     with open(file_name, 'a') as file:
         file.write(re_content)
+
+
+
 start_num = 16016118
 end_num = 16016125
-
 for i in range(start_num, end_num + 1):
     new_url = url.replace(str(start_num), str(i))
     get_novel_title_text(new_url)
