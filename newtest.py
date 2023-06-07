@@ -3,7 +3,7 @@ from lxml import html
 import re
 
 # 指定目标 URL
-url = 'https://www.zzxx.org/xs/24882/16016118.html'
+url = 'https://www.zzxx.org/xs/4885/2923150.html'
 
 xpath_expression = '//div[@class="bookname"]/h1'  # 指定的 XPath 表达式
 
@@ -39,9 +39,8 @@ def get_novel_title_text(url):
 
 
 
-start_num = 16016118
-end_num = 16016125
+start_num = 2923150
+end_num = 2923250
 for i in range(start_num, end_num + 1):
     new_url = url.replace(str(start_num), str(i))
     get_novel_title_text(new_url)
-
