@@ -2,7 +2,7 @@
 *.txt
 *.xlsx
 *.DS_Store
-plawwright_test/
+playwright_test/
 
 
 # Byte-compiled / optimized / DLL files
