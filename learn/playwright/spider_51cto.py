@@ -29,7 +29,7 @@ def run(playwright: Playwright) -> None:
         # xpath='/html/body/div[2]/div[2]/ul[1]/li[1]/div[1]/a[1]'
         with page.expect_popup() as page1_info:
             page.locator(csspath).click()
-            time.sleep(0.5)
+            time.sleep(1)
             courseMap=( i,page1_info.value.title(),page1_info.value.url)
             courseList.append(courseMap)
             print(courseMap)
