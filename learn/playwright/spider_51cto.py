@@ -24,7 +24,8 @@ def run(playwright: Playwright) -> None:
         page.add_init_script(js)
         page.goto("https://blog.51cto.com/search/user?uid=15239893&q=playwright+"+str(i))
         print(i)    
-        csspath='div.last>div.m-1>a.m-1.fl'
+        csspath='div.last>div.m-1>a.m-1-4.fl'
+        
         # page.query_selector_all("xpath=//*[@class=first]")[0].click()
         # xpath='/html/body/div[2]/div[2]/ul[1]/li[1]/div[1]/a[1]'
         with page.expect_popup() as page1_info:
